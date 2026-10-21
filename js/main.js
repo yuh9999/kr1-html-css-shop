@@ -72,3 +72,66 @@ orderForm.addEventListener('submit', (event) => {
   // Закрываем модальное окно.
   orderDialog.close();
 });
+
+
+// Находим нашу кнопку по ID
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+// Отслеживаем прокрутку страницы
+window.onscroll = function() {
+    
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+    } else {
+        // Иначе скрываем
+        backToTopBtn.style.display = "none";
+    }
+};
+
+// Добавляем обработчик клика
+backToTopBtn.addEventListener("click", function() {
+    // Плавно скроллим к самому верху
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const reviewsModal = document.getElementById('reviewsModal');
+  const closeReviewsModal = document.getElementById('closeReviewsModal');
+  const reviewsModalTitle = document.getElementById('reviewsModalTitle');
+  const openReviewsBtns = document.querySelectorAll('.open-reviews-btn');
+
+  // Открытие окна
+  if (openReviewsBtns.length > 0) {
+    openReviewsBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const productName = this.getAttribute('data-product');
+        reviewsModalTitle.textContent = 'Отзывы: ' + productName;
+        reviewsModal.classList.add('modal--active');
+      });
+    });
+  }
+
+  // Закрытие по крестику
+  if (closeReviewsModal) {
+    closeReviewsModal.addEventListener('click', () => {
+      reviewsModal.classList.remove('modal--active');
+    });
+  }
+
+  // Закрытие по клику на затемненный фон
+  if (reviewsModal) {
+    reviewsModal.addEventListener('click', (e) => {
+      if (e.target === reviewsModal) {
+        reviewsModal.classList.remove('modal--active');
+      }
+    });
+  }
+});
