@@ -69,30 +69,58 @@
 
       <div class="products-grid">
         <article class="product-card product-card--featured">
-          <h3 class="product-card__title">Товар 1</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">Цена: 1000 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 1">
-            Заказать
+          <img  class ="foto_card" src="https://img.ofisarium.ru/280584-2-thumb.webp" alt="">
+          <h3 class="product-card__title">Тетрадь</h3>
+          <p class="product-card__description">Тетрадь 48 листов в клетку — яркая и оригинальная тетрадь для школы,
+            учёбы и повседневных записей.</p>
+          <p class="product-card__price">Цена: 54 руб/шт.</p>
+          <div class="product-card__actions">
+            <button class="button button--primary product-card__button" type="button" data-product="Товар 1">
+              Заказать
+            </button>
+            <button class="button button--secondary open-reviews-btn" type="button" data-product="Тетрадь">
+              Отзывы
+            </button>
+          </div>
           </button>
         </article>
 
         <article class="product-card">
-          <h3 class="product-card__title">Товар 2</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
+          
+          <img class ="foto_card" src="https://img.magnific.com/premium-photo/shovel-3d-model_1056546-559.jpg?semt=ais_hybrid&w=740" alt="">
+          <h3 class="product-card__title">Лопата рабочая</h3>
+          <p class="product-card__description">Автомобильная лопата — незаменимый помощник для каждого водителя, 
+            который ценит безопасность и самостоятельность в дорожных ситуациях. </p>
           <p class="product-card__price">Цена: 1500 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 2">
-            Заказать
+          <div class="product-card__actions">
+            <button class="button button--primary product-card__button" type="button" data-product="Товар 2">
+              Заказать
+            </button>
+            <button class="button button--secondary open-reviews-btn" type="button" data-product="Тетрадь">
+              Отзывы
+            </button>
+          </div>
           </button>
         </article>
 
           <article class="product-card">
-          <h3 class="product-card__title">Товар 3</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
+            <img class ="foto_card" src="https://avatars.mds.yandex.net/get-mpic/6409980/2a00000197ee1f315207d8bcf84db2792575/orig" alt="">
+          <h3 class="product-card__title">Водяной пистолет.</h3>
+          <p class="product-card__description">Электрический водяной пистолет — популярная летняя игрушка для детей и подростков, 
+            идеально подходит для водных битв на пляже, даче, в бассейне и на природе.</p>
           <p class="product-card__price">Цена: 2100 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 3">
-            Заказать
+          <div class="product-card__actions">
+            <button class="button button--primary product-card__button" type="button" data-product="Товар 3">
+              Заказать
+            </button>
+            <button class="button button--secondary open-reviews-btn" type="button" data-product="Тетрадь">
+              Отзывы
+            </button>
+          </div>
           </button>
+
+        
+
         </article>
       </div>
     </section>
@@ -118,6 +146,27 @@
     <p class="success-message" id="success-message" hidden>
       Форма успешно отправлена!
     </p>
+  
+           <!-- Блок FAQ (Простой вариант) -->
+    <section class="faq">
+      <h2 class="section__title">Часто задаваемые вопросы</h2>
+
+      <details class="faq__item">
+        <summary class="faq__question">Как оформить заказ на сайте?</summary>
+        <p class="faq__answer">Выберите товар в каталоге, нажмите «Заказать» и заполните форму. Мы свяжемся с вами.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">Сколько стоит доставка?</summary>
+        <p class="faq__answer">По городу доставка бесплатная при заказе от 3000 рублей.</p>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__question">Можно ли вернуть товар?</summary>
+        <p class="faq__answer">Да, в течение 14 дней, если сохранена упаковка и товар не использовался.</p>
+      </details>
+    </section>
+    
   </main>
 
   <footer class="site-footer" id="contacts">
@@ -212,5 +261,37 @@
       </div>
     </form>
   </dialog>
+
+
+    <button id="backToTopBtn" title="Наверх">↑</button>
+
+
+        <!-- Модальное окно для отзывов -->
+  <div class="modal" id="reviewsModal">
+    <div class="modal__content">
+      <button class="modal__close" id="closeReviewsModal" type="button">&times;</button>
+      <h2 class="modal__title" id="reviewsModalTitle">Отзывы</h2>
+      
+      <div class="modal__reviews-list">
+        <div class="review-item">
+          <div class="review-item__header">
+            <strong class="review-item__author">Пользователь Дмитрий</strong>
+            <span class="review-item__rating">★★★★★</span>
+          </div>
+          <p class="review-item__text">Крутой товар!</p>
+        </div>
+        
+        <div class="review-item">
+          <div class="review-item__header">
+            <strong class="review-item__author">people</strong>
+            <span class="review-item__rating">★★★★☆</span>
+          </div>
+          <p class="review-item__text">Можно лучше</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 </body>
 </html>
