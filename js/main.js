@@ -135,3 +135,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+// --- ОЧИСТКА ФОРМЫ ЗАКАЗА ---
+const clearOrderFormBtn = document.getElementById('clear-order-form');
+const orderFormElement = document.getElementById('order-form');
+
+if (clearOrderFormBtn && orderFormElement) {
+  clearOrderFormBtn.addEventListener('click', () => {
+    orderFormElement.reset(); // Встроенная функция очистки формы
+  });
+}
