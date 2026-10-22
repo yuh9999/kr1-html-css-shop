@@ -667,3 +667,105 @@ a:focus-visible {
   margin-bottom: 0;
   color: var(--color-muted);
 }
+
+
+
+
+
+
+/* ===============================
+   Страница карточки товара
+   =============================== */
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Две равные колонки */
+  gap: var(--space-xl);
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-xl);
+  background-color: var(--color-bg);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+/* Блок с картинкой */
+.product-detail__image-wrapper {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-detail__image {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* Блок с информацией */
+.product-detail__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-detail__title {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+  font-size: 28px;
+}
+
+.product-detail__rating {
+  color: #ffb400;
+  font-size: 18px;
+  margin-bottom: var(--space-md);
+}
+
+.product-detail__reviews {
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.product-detail__price {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.product-detail__description {
+  font-size: 16px;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+/* Список характеристик */
+.product-detail__features {
+  margin: 0 0 var(--space-lg) 0;
+  padding-left: 20px;
+  color: var(--color-muted);
+}
+
+.product-detail__features li {
+  margin-bottom: var(--space-sm);
+}
+
+.product-detail__actions {
+  margin-top: auto; /* Прижимает кнопку к низу */
+}
+
+.product-detail__actions .button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+}
+
+/* Адаптив для мобильных (чтобы колонки ставились друг под друга) */
+@media (max-width: 768px) {
+  .product-detail {
+    grid-template-columns: 1fr; /* Одна колонка */
+  }
+}
